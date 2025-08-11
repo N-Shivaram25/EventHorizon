@@ -64,6 +64,97 @@ export const formatInputTime = (date) => {
 };
 
 /**
+ * Checks if a date is today
+ * @param {Date|string} date - The date to check
+ * @returns {boolean} True if date is today
+ */
+export const isDateToday = (date) => {
+  if (!date) return false;
+  const dateObj = typeof date === 'string' ? parseISO(date) : date;
+  return isToday(dateObj);
+};
+
+/**
+ * Checks if two dates are the same day
+ * @param {Date|string} date1 - First date
+ * @param {Date|string} date2 - Second date
+ * @returns {boolean} True if dates are the same day
+ */
+export const areSameDay = (date1, date2) => {
+  if (!date1 || !date2) return false;
+  const dateObj1 = typeof date1 === 'string' ? parseISO(date1) : date1;
+  const dateObj2 = typeof date2 === 'string' ? parseISO(date2) : date2;
+  return isSameDay(dateObj1, dateObj2);
+};
+
+/**
+ * Checks if a date is in the same month as another date
+ * @param {Date|string} date - The date to check
+ * @param {Date|string} monthDate - The month to compare against
+ * @returns {boolean} True if date is in the same month
+ */
+export const isInSameMonth = (date, monthDate) => {
+  if (!date || !monthDate) return false;
+  const dateObj1 = typeof date === 'string' ? parseISO(date) : date;
+  const dateObj2 = typeof monthDate === 'string' ? parseISO(monthDate) : monthDate;
+  return isSameMonth(dateObj1, dateObj2);
+};
+
+/**
+ * Gets the start of the month for a given date
+ * @param {Date|string} date - The date
+ * @returns {Date} Start of month
+ */
+export const getMonthStart = (date) => {
+  const dateObj = typeof date === 'string' ? parseISO(date) : date;
+  return startOfMonth(dateObj);
+};
+
+/**
+ * Gets the end of the month for a given date
+ * @param {Date|string} date - The date
+ * @returns {Date} End of month
+ */
+export const getMonthEnd = (date) => {
+  const dateObj = typeof date === 'string' ? parseISO(date) : date;
+  return endOfMonth(dateObj);
+};
+
+/**
+ * Gets the start of the week for a given date
+ * @param {Date|string} date - The date
+ * @returns {Date} Start of week
+ */
+export const getWeekStart = (date) => {
+  const dateObj = typeof date === 'string' ? parseISO(date) : date;
+  return startOfWeek(dateObj);
+};
+
+/**
+ * Gets the end of the week for a given date
+ * @param {Date|string} date - The date
+ * @returns {Date} End of week
+ */
+export const getWeekEnd = (date) => {
+  const dateObj = typeof date === 'string' ? parseISO(date) : date;
+  return endOfWeek(dateObj);
+};
+
+/**
+ * Adds days to a date
+ * @param {Date|string} date - The base date
+ * @param {number} days - Number of days to add
+ * @returns {Date} New date
+ */
+export const addDaysToDate = (date, days) => {
+  const dateObj = typeof date === 'string' ? parseISO(date) : date;
+  return addDays(dateObj, days);
+};
+
+// Export commonly used functions with shorter names for backward compatibility
+export { isToday, isSameDay, isSameMonth, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays };
+
+/**
  * Formats a date and time for display
  * @param {Date|string} date - The date to format
  * @returns {string} Formatted date and time string
