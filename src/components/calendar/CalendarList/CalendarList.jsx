@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useCalendar } from '../../../contexts/CalendarContext';
 import { formatDisplayDate, isToday, isSameDay } from '../../../utils/dateUtils';
 import styles from './CalendarList.module.scss';
@@ -36,13 +35,10 @@ const CalendarList = () => {
             <p>No events scheduled</p>
           </div>
         ) : (
-          sortedDates.map((date, index) => (
-            <motion.div
+          sortedDates.map((date) => (
+            <div
               key={date}
               className={styles.dateGroup}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
             >
               <div className={styles.dateHeader}>
                 <h3>
@@ -70,7 +66,7 @@ const CalendarList = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))
         )}
       </div>

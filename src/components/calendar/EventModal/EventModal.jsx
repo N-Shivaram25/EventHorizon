@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { FiX, FiCalendar, FiClock, FiType, FiFileText } from 'react-icons/fi';
 import Button from '../../common/Button/Button';
 import { useCalendar } from '../../../contexts/CalendarContext';
@@ -35,18 +34,12 @@ const EventModal = ({ onClose, event = null }) => {
   };
 
   return (
-    <motion.div
+    <div
       className={styles.overlay}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
       onClick={onClose}
     >
-      <motion.div
+      <div
         className={styles.modal}
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
         onClick={(e) => e.stopPropagation()}
       >
         <div className={styles.header}>
@@ -133,8 +126,8 @@ const EventModal = ({ onClose, event = null }) => {
             </Button>
           </div>
         </form>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 

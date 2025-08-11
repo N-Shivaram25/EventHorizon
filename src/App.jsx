@@ -1,25 +1,18 @@
 
 import React, { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import { ThemeProvider } from './contexts/ThemeContext';
 import { CalendarProvider } from './contexts/CalendarContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/layout/Header/Header';
-import Calendar from './components/calendar';
+import Calendar from './components/calendar/index';
+import ViewToggle from './components/calendar/ViewToggle';
 import EventModal from './components/calendar/EventModal/EventModal';
 import FAB from './components/common/FloatingActionButton/FAB';
+import ThemeToggle from './components/common/ThemeToggle/ThemeToggle';
 import './assets/styles/global.scss';
 import styles from './App.module.scss';
 
 function App() {
   const [showEventModal, setShowEventModal] = useState(false);
-
-  const handleOpenEventModal = () => {
-    setShowEventModal(true);
-  };
-
-  const handleCloseEventModal = () => {
-    setShowEventModal(false);
-  };
 
   return (
     <ThemeProvider>
@@ -27,17 +20,22 @@ function App() {
         <div className={styles.app}>
           <Header />
           
-          <main className={styles.main}>
-            <Calendar />
-          </main>
+          <div className={styles.content}>
+            <div className={styles.controls}>
+              <ViewToggle />
+              <ThemeToggle />
+            </div>
+            
+            <main className={styles.main}>
+              <Calendar />
+            </main>
+          </div>
 
-          <FAB onClick={handleOpenEventModal} />
+          <FAB onClick={() => setShowEventModal(true)} />
 
-          <AnimatePresence>
-            {showEventModal && (
-              <EventModal onClose={handleCloseEventModal} />
-            )}
-          </AnimatePresence>
+          {showEventModal && (
+            <EventModal onClose={() => setShowEventModal(false)} />
+          )}
         </div>
       </CalendarProvider>
     </ThemeProvider>
