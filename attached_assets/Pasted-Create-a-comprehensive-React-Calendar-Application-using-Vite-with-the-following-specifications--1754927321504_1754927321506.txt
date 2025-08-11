@@ -1,0 +1,137 @@
+Create a comprehensive React Calendar Application using Vite with the following specifications:
+
+    Project Structure:
+
+        Implement the exact folder structure provided, with all components properly organized
+
+        Use SCSS modules for component styling
+
+        Include all context, hook, and utility files as outlined
+
+    Core Features:
+
+        Calendar with grid and list view modes
+
+        Event creation/editing with modal form
+
+        Recurring event options
+
+        Light/dark theme switching with system preference detection
+
+        Local storage persistence for events and settings
+
+    Technical Requirements:
+
+        React 18+ with functional components and hooks
+
+        TypeScript (include type definitions)
+
+        date-fns for date handling
+
+        Framer Motion for animations
+
+        React Icons for all iconography
+
+        SCSS with CSS modules for styling
+
+        Context API for state management
+
+    Component Implementation:
+
+        Create all components from the structure with:
+
+            Proper TypeScript interfaces
+
+            Complete functionality
+
+            Responsive design
+
+            Accessibility compliance (ARIA)
+
+        Specifically implement:
+
+            CalendarGrid with day cells and event display
+
+            CalendarList with chronological event listing
+
+            EventModal with form validation
+
+            Recurring event options component
+
+            Theme toggle with smooth transitions
+
+    Quality Standards:
+
+        ESLint configuration for React/TypeScript
+
+        Prettier formatting
+
+        JSDoc comments for all functions
+
+        Proper error boundaries
+
+        Loading states for async operations
+
+        Comprehensive prop types
+
+    Additional Requirements:
+
+        Implement custom hooks for:
+
+            Calendar navigation
+
+            Event management
+
+            Theme handling
+
+        Create utility functions for:
+
+            Date formatting/calculations
+
+            Local storage operations
+
+            Theme configuration
+
+    Output Format:
+
+        Provide complete code for each file
+
+        Include all necessary dependencies in package.json
+
+        Add configuration files (vite, eslint, etc.)
+
+        Include a README with setup instructions
+
+Start by creating:
+
+    The main App component with context providers
+
+    Core calendar components (Grid and List views)
+
+    Event management system
+
+    Theme infrastructure
+
+Use modern React patterns including:
+
+    Custom hooks for reusable logic
+
+    Context API for state sharing
+
+    Component composition
+
+    Performance optimizations (React.memo, useCallback)
+
+Ensure all components are properly typed and documented."
+
+Key Benefits of This Prompt:
+
+    Precision: Clearly specifies the exact folder structure and file organization
+
+    Completeness: Covers all technical aspects from state management to styling
+
+    Quality Focus: Emphasizes code quality, typing, and documentation
+
+    Modern Practices: Requires current React patterns and optimizations
+
+    Implementation Details: Specifies which libraries to use for each functionality
