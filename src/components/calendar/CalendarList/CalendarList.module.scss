@@ -1,0 +1,126 @@
+
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+.container {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+}
+
+.eventsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.noEvents {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+.dateGroup {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dateHeader {
+  padding: 1rem 1.5rem;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+
+  h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+.todayBadge {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.events {
+  padding: 0.5rem;
+}
+
+.event {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-left: 3px solid var(--primary-color);
+  border-radius: 6px;
+  background: var(--bg-primary);
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.eventTime {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  min-width: 60px;
+}
+
+.eventContent {
+  flex: 1;
+
+  h4 {
+    margin: 0 0 0.25rem 0;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+}
