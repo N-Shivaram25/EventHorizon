@@ -1,0 +1,16 @@
+
+@use '../../../assets/styles/variables' as *;
+@use '../../../assets/styles/mixins' as *;
+
+.calendar {
+  @include card;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: var(--border-color);
+  border-radius: $border-radius-md;
+  overflow: hidden;
+}

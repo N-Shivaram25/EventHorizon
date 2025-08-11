@@ -1,0 +1,69 @@
+
+// Color palette
+$primary-color: #3b82f6;
+$primary-light: #93c5fd;
+$primary-dark: #1d4ed8;
+$secondary-color: #6b7280;
+$success-color: #10b981;
+$warning-color: #f59e0b;
+$error-color: #ef4444;
+
+// Light theme
+$light-bg: #ffffff;
+$light-bg-secondary: #f9fafb;
+$light-text: #1f2937;
+$light-text-secondary: #6b7280;
+$light-border: #e5e7eb;
+$light-hover: #f3f4f6;
+$light-selected: #dbeafe;
+$light-disabled: #f3f4f6;
+
+// Dark theme
+$dark-bg: #111827;
+$dark-bg-secondary: #1f2937;
+$dark-text: #f9fafb;
+$dark-text-secondary: #9ca3af;
+$dark-border: #374151;
+$dark-hover: #1f2937;
+$dark-selected: #1e40af;
+$dark-disabled: #1f2937;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+
+// Typography
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 1.875rem;
+
+// Border radius
+$border-radius-sm: 0.375rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 0.75rem;
+$border-radius-xl: 1rem;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// Transitions
+$transition-fast: 0.15s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
